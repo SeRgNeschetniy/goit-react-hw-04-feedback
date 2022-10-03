@@ -1,4 +1,4 @@
-import { Component, useState } from 'react';
+import { useState } from 'react';
 import { Statistics } from './Statistics/Statistics';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Notification } from './Notification/Notification';
@@ -14,11 +14,11 @@ export default function App() {
 
     switch (key) {
       case 'good':
-        return setGood(good => good + 1);
+        return setGood(state => state + 1);
       case 'neutral':
-        return setNeutral(neutral => neutral + 1);
+        return setNeutral(state => state + 1);
       case 'bad':
-        return setBad(bad => bad + 1);
+        return setBad(state => state + 1);
       default:
         return;
     }
